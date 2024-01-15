@@ -18,7 +18,8 @@ const z = "constant";
 console.log(z);
 
 // Checkpoint 1.1 What is the difference between var, let, and const?
-// Answer: all three are used to assign a variable, var is much older, let can be updated but not redeclared, while const cannot be updated nor redeclared 
+/* Answer: All three are used for variable assignment. var is an older declaration keyword and not blocked-scope, 
+while let is blocked-scope, and allows updates but not redeclaration. On the other hand, const does not allow both updates and redeclaration */
 
 // TODO 1.4 Try out the different arithmetic operators
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#arithmetic_operators
@@ -52,11 +53,25 @@ console.log(truth);
 
 // TODO 1.7 Try out the different relational operators
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#relational_operators
-const pl = ["python", "c#", "c++", "c"];
-0 in pl; 
-3 in pl;
-6 in pl;
 
 // Checkpoint 1.5 What does [] == false evaluate to? Why does that happen? Research why
-// Answer: 
+/* Answer: 
+In JavaScript, when you use the double equals sign (==) to compare things, 
+it tries to make them the same type before checking if they're equal.
+So, if you compare an empty array [] with false using ==, 
+JavaScript will turn the array into a string and then compare it with false. The empty array becomes an empty string, and when you compare an empty string with false, JavaScript considers it similar, so it says it's true.
+But keep in mind, it's better to use triple equals (===) for comparison in JavaScript because it doesn't try to change the types and gives a more straightforward result
+*/
+
 // Your code here
+console.log([] == false);
+const pl = ["python", "c#", "c++", "c"];
+console.log(0 in pl); 
+console.log(3 in pl);
+console.log(6 in pl);
+
+const a = 1;
+const b = 2;
+console.log(a>b);
+console.log(b>a);
+console.log(a===b);
