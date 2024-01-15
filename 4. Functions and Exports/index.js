@@ -13,7 +13,7 @@ function greet(name) {
   }
 greet("Lois")
 // Checkpoint 4.1 What is the difference between a function declaration and a function expression?
-// Answer: 
+// Answer: function declarations are available for use throughout the code, regardless of where they appear, while function expressions need to be defined before they are called.
 
 // Todo 4.2 Declare a function expression named 'calculateArea' that takes the length and width of a rectangle and returns its area
 // Then, Call the 'calculateArea' function with any length and width as arguments
@@ -27,7 +27,18 @@ const width = 120
 const area = calculateArea(length, width)
 console.log(area)
 // Checkpoint 4.2 What is a callback function? Provide an example.
-// Answer: 
+// Answer: A callback function is a function that is passed as an argument to another function and is executed after the completion of a specific task.
+function doHomework(subject, callback) {
+    console.log(`Starting my ${subject} homework.`);
+    callback();
+  }
+  
+  function Finished() {
+    console.log('Finished my homework.');
+  }
+  
+  doHomework('math', Finished);
+
 
 // Todo 4.3 Declare a higher-order function named 'modifyArray' that takes an array and a function as parameters. The function should modify each element in the array using the provided function and return the modified array.
 // Then, Call the 'modifyArray' function with the 'numbers' array and a function that increments each number by 1
@@ -77,4 +88,9 @@ isPalindrome('lois');
 isPalindrome('racecar');
 // Checkpoint 4.3 What does the require function and module.exports variable do?
 // Should we use it over the import and export keywords? Why? Research your answer.
-// Answer: 
+/* Answer: In Node.js, the require function is used to import modules, and the module.exports variable is used to define what a 
+module exports. This is known as the CommonJS module system. In modern JavaScript or environments that support ES6 modules, 
+you use import and export for similar functionality. The choice between them depends on the specific environment and project requirements. 
+If you’re working in Node.js, you typically use require and module.exports. 
+If you’re in a modern JavaScript or browser environment, you can use import and export. 
+*/
