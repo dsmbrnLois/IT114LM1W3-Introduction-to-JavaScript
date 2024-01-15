@@ -33,7 +33,7 @@ console.log(average);
 let subject = new Object();
 subject = {    
     coursecode: "IT114L",  
-    name: "Lois",
+    name: "Web Systems",
     units: 3,
     numofStud: 45,        
   };
@@ -45,15 +45,48 @@ console.log(subject)
 console.log(subject.professor)
 // Todo 3.5 Declare and array of objects with information about the courses you are taking this term
 // Your code here
+let courses = [
+  {
+    coursecode: "IT114L",
+    name: "Web Systems (lab)",
+    units: 1,
+    numofStud: 45,
+    professor: "Job Lipat",
+  },
+  {
+    coursecode: "IT133",
+    name: "Technopreneurship",
+    units: 4,
+    numofStud: 30,
+    professor: "Jonalyn Ebron",
+  },
+  {
+    coursecode: "IT114",
+    name: "Web Systems",
+    units: 3,
+    numofStud: 45,
+    professor: "Adomar Ilao",
+  }
+];
 
+console.log(courses);
 // Todo 3.5 Calculate the total number of units you are taking this term using the array of objects.
 // Your code here
-
+let totalUnits = 0;
+for (let i = 0; i < courses.length; i++) {
+  totalUnits += courses[i].units;
+}
+console.log("total units: " + totalUnits)
 // Checkpoint 3.2 What would be the equivalent of objects in python? How would you compare them?
 // Answer: 
 
 // Todo 3.6 Going back to the array of numbers, use the spread syntax to create a copy of the array with an additional number
 // Your code here
+let numberscopy = [...numbers, 420]
+console.log(numberscopy)
 
 // Todo 3.7 Going back to your IT114L object, extract the course code and units using the spread operator
 // Your code here
+let { coursecode, units, ...rest} = subject
+console.log("Course code" + coursecode)
+console.log("Units" + units)
