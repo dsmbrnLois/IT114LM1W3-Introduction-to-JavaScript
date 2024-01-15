@@ -41,7 +41,7 @@ const toDisplay = randomNumber % 2 == 0 ? 'even' : 'odd'
 console.log("toDisplay", toDisplay);
 
 // Checkpoint 2.1 How do you use switch statements and when would you use them? Try researching the answer
-// Answer: 
+// Answer: Switch statements are a more concise and readable alternative to using multiple if-else statements. They are used when you need to compare a variable against various constant values.
 
 // TODO 2.5 Use a for loop to print the numbers 1 to N
 const n = 10
@@ -58,7 +58,8 @@ while (i < list.length){
     i ++
 }
 // Checkpoint 2.3 What is the difference between do while and while loop?
-// Answer: 
+// Answer: The main difference between the two is that do while loop performs the loop then afterwards checks if condition is satisfied,
+// meanwhile in a while loop, the condition is checked first before performing the loop.
 
 // TODO 2.7 Use a for of loop to display all the values in the list
 // Your code here
@@ -78,7 +79,11 @@ list.forEach(element => {
     console.log(element)
 });
 // Checkpoint 2.2 When should you use for of, for in, or .forEach loops? Try researching the answer
-// Answer: 
+/* Answer: 
+Use a for loop when you want to change the array while going through it, 
+go for a for...in loop when you're dealing with object properties, and pick a 
+forEach loop when you're only working with arrays and want an easy and short way to go through them.
+*/
 
 // TODO 2.10 Use the try and catch block to catch division by zero errors in the code below.
 // In the finally block, simulate cleaning up resources by displaying "cleaning up resources"
