@@ -26,7 +26,9 @@ console.log(maxval)
 const average = numbers.reduce((a, b) => a + b, 0) / numbers.length;
 console.log(average);
 // Checkpoint 3.1 How would you compare lists in python vs arrays in JavaScript
-// Answer: 
+// Answer: Both Python lists and JavaScript arrays can be used to store collections of elements, they have different characteristics and methods for manipulation.
+// However, they have similar functionalities. They use the same form of indexing which starts at 0, and both have the capabality of being modified. 
+// Additionally, they also have some similar functions like len(), append(), sort(), etc.
 
 // Todo 3.3 Declare an object with information about IT114L (course code, name, units, number of students)
 // Your code here
@@ -78,7 +80,12 @@ for (let i = 0; i < courses.length; i++) {
 }
 console.log("total units: " + totalUnits)
 // Checkpoint 3.2 What would be the equivalent of objects in python? How would you compare them?
-// Answer: 
+/* Answer: Python dictionaries are the equivalent of objects in JavaScript. 
+Both data structures allow you to store related information using key-value pairs. 
+In JavaScript, objects can have methods and properties, while in Python, dictionaries 
+can contain various types of values. However, they share the fundamental concept of 
+associating keys with corresponding values. Despite some differences, they serve similar purposes in representing structured data.
+*/
 
 // Todo 3.6 Going back to the array of numbers, use the spread syntax to create a copy of the array with an additional number
 // Your code here
