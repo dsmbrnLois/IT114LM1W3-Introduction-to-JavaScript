@@ -33,17 +33,48 @@ console.log(area)
 // Then, Call the 'modifyArray' function with the 'numbers' array and a function that increments each number by 1
 // Useful Tutorial: https://youtu.be/H4awPsyugS0?si=7wC1B7whXVkG8X5l
 // Your code here
+let numbers = [
+    1, 89, 55, 63, 29, 19,
+    15, 77, 62, 68, 29, 84,
+    21, 26, 49
+];
+function modifyArray(arr, modifierFunction) {
+    const modifiedArr = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        modifiedArr.push(modifierFunction(arr[i]));
+    }
+
+    return modifiedArr;
+}
+
+const increment = function(number) {
+    return number + 1;
+};
+
+const modifiedNumbers = modifyArray(numbers, increment);
+console.log("Set of numbers: ", numbers);
+console.log("incremented by 1:", modifiedNumbers);
 
 // Todo 4.4 See mathUtils.js for the instructions to create the add method and PI constant.
 // Then, import and call the add method here and display the value of the PI constant
 // Useful Tutorial: https://youtu.be/qgRUr-YUk1Q?si=ceAaeHJfCYCmeNWx
 // Your code here
 
+const mathUtils = require('./mathUtils');
+const sum = mathUtils.add(1,2);
+console.log("Sum of two numbers: ", sum)
+
+console.log("Value of PI: ", mathUtils.PI)
+
 // Todo 4.5 See isPalindrome.js for the instructions to create the isPalindrome method.
 // Then, import and call the isPalindrome method here
 // Useful Tutorial: https://youtu.be/qgRUr-YUk1Q?si=ceAaeHJfCYCmeNWx
 // Your code here
+const isPalindrome = require('./isPalindrome')
 
+isPalindrome('lois');
+isPalindrome('racecar');
 // Checkpoint 4.3 What does the require function and module.exports variable do?
 // Should we use it over the import and export keywords? Why? Research your answer.
 // Answer: 
